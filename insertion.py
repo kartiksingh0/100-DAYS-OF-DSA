@@ -37,3 +37,14 @@ def insertion_end(newNode):
 newNode = NODE(17)
 insertion_end(newNode)
 printLinkedlist(head)
+
+def insertionAT_K(newNode,k):
+    curr = head
+    for i in range(k-1):
+        curr= curr.next
+    newNode.next = curr.next
+    curr.next = newNode
+
+newNode = NODE(72)
+insertionAT_K(newNode,4)
+printLinkedlist(head)
